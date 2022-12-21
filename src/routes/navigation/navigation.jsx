@@ -1,7 +1,7 @@
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import { LogoContainer, NavigationContainer, NavLink, NavLinks } from "./navigation.styles.jsx";
 import { ReactComponent as Logo } from "../../assets/crown-crw-logo.svg";
+import { LogoContainer, NavigationContainer, NavLink, NavLinks } from "./navigation.styles.jsx";
 const Navigation = () => {
     return (
         <Fragment>
