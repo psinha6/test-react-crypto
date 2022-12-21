@@ -1,13 +1,10 @@
-import React from "react";
-import { getSelectedState, Grid, GridColumn } from '@progress/kendo-react-grid';
 import { process } from "@progress/kendo-data-query";
+import { Grid, GridColumn } from '@progress/kendo-react-grid';
 import { Loader } from "@progress/kendo-react-indicators";
-import { useGetCryptosQuery } from '../../services/cryptoApi';
 import millify from "millify";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-
-const SELECTED_FIELD = 'name';
-const DATA_ITEM_KEY = 'uuid';
+import { useGetCryptosQuery } from '../../services/cryptoApi';
 
 const CryptoGridComponent = () => {
   const navigate = useNavigate();
