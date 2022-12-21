@@ -22,7 +22,7 @@ export const cryptoApi = createApi({
     getCryptoMarket: builder.query({
       query: (coinId) =>
         createRequest(`coin/${coinId}/markets?limit=10`),
-    }),
+    })
   })
 });
 

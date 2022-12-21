@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const CategoryContainer = styled.div`
-height: 70px;
-width: 100%;
+width: 95%;
 display: flex;
 justify-content: space-between;
 margin-bottom: 25px;
+margin: 20px;
 `
 
 export const DetailsContainer = styled.div`
@@ -15,6 +15,8 @@ export const DetailsContainer = styled.div`
   color: #0071bd;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 `
 export const StatsDetails = styled.div`
   margin-left: 20px;
@@ -28,12 +30,12 @@ export const CoinDetailsHeading = styled.label`
 export const CoinStats = styled.div`
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #d9d9d9;
   font-size: 1rem;
   opacity: 0.9;
   padding: 20px;
   &:hover {
-    background-color: var(--bgSecondary);
+    background-color: #f9f9f9;
 }
 `
 export const CoinStatsName = styled.div`
