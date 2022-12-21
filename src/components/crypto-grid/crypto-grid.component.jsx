@@ -38,7 +38,8 @@ const CryptoGridComponent = () => {
 
   if (isFetching) return <Loader />;
   return <Grid style={{
-    height: '400px'
+    height: '400px',
+    margin: '20px'
   }} data={process(cryptosList.data.coins, dataState)} {...dataState} sortable={true} pageable={{
     buttonCount: 4,
     pageSizes: true,

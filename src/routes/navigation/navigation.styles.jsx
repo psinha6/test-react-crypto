@@ -6,7 +6,7 @@ export const NavigationContainer = styled.div`
     width: 100%;
     display: flex;
     margin-bottom: 25px;
-    background-color: #9c9a9a;
+    background-color: #111111;
     align-items: center;
 `
 
@@ -19,7 +19,7 @@ export const LogoContainer = styled(Link)`
         margin-left: 20px;
         height: 100%;
         cursor: pointer;
-        color: #000;
+        color: #fff;
         font-weight: bold;
     }
 `

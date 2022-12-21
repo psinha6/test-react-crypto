@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import DetailsFooter from "../../components/details-footer/details.footer";
 import MarketChart from "../../components/market-chart/market-chart.component";
 import { useGetCryptoDetailsQuery } from "../../services/cryptoApi";
-import { CategoryContainer, CoinDetailsHeading, CoinStats, CoinStatsName, DetailsContainer, Stats, StatsDetails } from "./details.styles.jsx";
+import { Banner, CategoryContainer, CoinDetailsHeading, CoinStats, CoinStatsName, DetailsContainer, Stats, StatsDetails } from "./details.styles.jsx";
 
 const Details = () => {
     const { id } = useParams();
@@ -20,7 +20,7 @@ const Details = () => {
             title: "Price to USD",
             value: `$ ${cryptoDetails.price && millify(cryptoDetails.price)}`,
         },
-        { 
+        {
             title: "Rank",
             value: cryptoDetails.rank,
         },
@@ -61,7 +61,10 @@ const Details = () => {
 
     return (
         <Fragment>
-            <MarketChart id={id} />
+            <Banner>
+                <p>{cryptoDetails.name} Coins Details</p>
+            </Banner>
+
             <CategoryContainer>
                 <DetailsContainer>
                     <div className="coindetals">
@@ -98,7 +101,8 @@ const Details = () => {
                     </StatsDetails>
                 </DetailsContainer>
             </CategoryContainer>
-            <DetailsFooter details={cryptoDetails}/>
+            <MarketChart id={id} />
+            { cryptoDetails && <DetailsFooter details={cryptoDetails.links} />}
         </Fragment>
     )
 }

@@ -19,12 +19,13 @@ export const MarketChart = ({ id }) => {
     <Chart pannable={true} zoomable={true}
       style={{
         height: 500,
+        margin: '20px'
       }}
     >
       <ChartTitle text="Line Chart displaying the list of top 10 Coins market share" />
       <ChartLegend position="top" orientation="horizontal" />
       <ChartCategoryAxis>
-        <ChartCategoryAxisItem categories={categories} startAngle={80} maxDivisions={100} />
+        <ChartCategoryAxisItem categories={categories} startAngle={40} />
       </ChartCategoryAxis>
       <ChartSeries>
         {series.map((item, idx) => (

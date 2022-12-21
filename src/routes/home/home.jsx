@@ -1,9 +1,15 @@
 import CryptoGridComponent from "../../components/crypto-grid/crypto-grid.component";
+import { Banner } from "./home.styles";
 
 const Home = () => {
 
   return (
-    <CryptoGridComponent />
+    <div>
+      <Banner>
+        <p>List of coins</p>
+      </Banner>
+      <CryptoGridComponent />
+    </div>
   );
 }
 
